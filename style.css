@@ -1,7 +1,25 @@
+body {
+  background-color: rgb(253, 239, 222);
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 90vw;
+  padding: 10vw;
+}
+
 img {
   height: 0vw;
   margin: 0 auto;
   transition: 0.2s ease-in-out;
+}
+
+.accordion {
+  padding: 1vw;
 }
 
 .accordion-header {
@@ -10,7 +28,7 @@ img {
     align-items: center;
     padding: 1vw;
     cursor: pointer;
-    border-top: 2px solid rgb(212, 212, 212);
+    border-top: 0.01em solid rgb(182, 182, 182);
   }
 
 .accordion-header-wrapper{
@@ -20,7 +38,7 @@ img {
 }
 
   .accordion-toggle {
-    font-size: 3vw;
+    font-size: 1.5em;
     font-weight: bolder;
     transition: transform 0.3s ease-in-out;
   }
@@ -33,11 +51,7 @@ img {
     color: blue;
   }
 
-  input[type="radio"]:checked .accordion-header .accordion-title {
-    color: black;
-  }
-
-  input[type="radio"]:hover .accordion-header .accordion-title {
+  input[type="radio"]:checked + .accordion-header .accordion-title {
     color: black;
   }
 
@@ -70,35 +84,35 @@ img {
   input[type="radio"]:checked + .accordion-header img {
     height: 30vw;
   }
+
+  input[type="radio"]:active + .accordion-header .accordion-title {
+    color: blue;
+  }
+
+  input[type="radio"]:active + .accordion-header .accordion-toggle {
+    color: blue;
+  }
   
 @media only screen and (max-width: 320px) {
     .container {
-      margin: 0 auto;
-        max-width: 300px;
-        padding: 10px;
+      font-size: xx-small;
     }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 820px) {
     .container {
-      margin: 0 auto;
-        max-width: 700px;
-        padding: 20px;
+      font-size: medium;
     }
 }
 
 @media only screen and (min-width: 821px) and (max-width: 1920px) {
     .container {
-      margin: 0 auto;
-        max-width: 80vw;
-        padding: 10vw;
+      font-size: large;
     }
 }
 
 @media only screen and (min-width: 1921px) {
     .container {
-      margin: 0 auto;
-        max-width: 80vw;
-        padding: 10vw;
+      font-size: xx-large;
     }
 }
